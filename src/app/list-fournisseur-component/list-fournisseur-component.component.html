@@ -1,0 +1,6 @@
+<fieldset *ngFor="let fournisseur of list" [hidden]="fournisseur.idFournisseur>100" [ngStyle]="{'background-color':changecolor(fournisseur.libelle)}" (dblclick)="supp(fournisseur)">
+    <legend>idFournisseur: {{fournisseur.idFournisseur}}</legend>
+        code: <span [style.fontWeight]=getcolor(fournisseur.code)>{{fournisseur.code}}</span>
+        <br>
+        libelle: {{fournisseur.libelle}}
+    </fieldset> 
